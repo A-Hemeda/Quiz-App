@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <!--?========> Favicon <========-->
+    <link rel="icon" href="./images/quiz.png" />
+    <!--?========> Google Fonts <========-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700&family=Dosis:wght@200;300;400;500;600;700;800&family=Electrolize&display=swap"
+      rel="stylesheet"
+    />
+    <!--?========> Bootstrap Icons <========-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+      integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--?========> Bootstrap Style Sheet <========-->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css"
+      integrity="sha512-Z/def5z5u2aR89OuzYcxmDJ0Bnd5V1cKqBEbvLOiUNWdg9PQeXVvXLI90SE4QOHGlfLqUnDNVAYyZi8UwUTmWQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--?========> Animate.CSS <========-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--?========> Main style Sheet <========-->
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+
+  <body>
+    <main
+      class="min-vh-100 d-flex flex-column justify-content-center align-items-center"
+    >
+      <div class="heading animate__animated animate__zoomInDown">
+        <h1 class="mb-0">Quiz App</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <form
+            class="start-quiz col-lg-8 offset-lg-2 d-flex flex-column gap-3 animate__animated animate__fadeInBottomLeft animate__delay-1s"
+            id="quizOptions"
+          >
+            <div class="form-floating">
+              <select
+                class="form-select"
+                id="categoryMenu"
+                aria-label="category Select"
+              >
+                <option selected value="">Any Category</option>
+                <option value="9">General Knowledge</option>
+                <option value="27">Animals</option>
+                <option value="19">Science: Mathematics</option>
+                <option value="18">Science: Computers</option>
+                <option value="22">Geography</option>
+              </select>
+              <label for="categoryMenu">Choose Category</label>
+            </div>
+
+            <div class="form-floating">
+              <select
+                class="form-select"
+                id="difficultyOptions"
+                aria-label="difficulty Select"
+              >
+                <option selected value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+              </select>
+              <label for="difficultyOptions">Choose Difficulty Level</label>
+            </div>
+
+            <div class="form-floating">
+              <input
+                type="number"
+                class="form-control"
+                id="questionsNumber"
+                placeholder="Number of Questions"
+              />
+              <label for="QuestionsNumber">Number of Questions</label>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-start rounded-pill"
+              id="startQuiz"
+            >
+              Start
+            </button>
+          </form>
+
+          <div class="questions-container"></div>
+        </div>
+      </div>
+    </main>
+    <!--!========> JS Main file <========-->
+    <script src="./js/index.js" type="module"></script>
+  </body>
+</html>
